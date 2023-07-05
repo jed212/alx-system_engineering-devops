@@ -1,2 +1,2 @@
 #!/bin/bash
-for file in *.html; do dest="../$file"; [ ! -e "$dest" ] || [ "$file" -nt "$dest" ] && cp "$file" "$dest"; done
+cp -u *.html ..
