@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Using awk to extract and format the information from the Apache log file
 
-awk '{print $1, $9, $2}' apache-access.log | sort |uniq -c | sort -rn | awk '{print $1, $2, $3}'
+awk '{ print $1 " " $9}' apache-access.log | sort | uniq -c | sort -rn
