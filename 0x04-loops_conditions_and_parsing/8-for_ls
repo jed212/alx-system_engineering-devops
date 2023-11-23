@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Using a for loop to iterate through the files in the current directory
+
+for file in *; do
+    if [ ! -f "$file" ] || [[ $file == .* ]]; then
+       continue
+    fi
+    
+    display_name=$(echo "$file" | cut -d '-' -f 2-)
+
+    echo "$display_name"
+done

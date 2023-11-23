@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Using awk to extract and format information from the Apache log file
+
+awk '{print $1, $9}' apache-access.log
